@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".LocationDisplay">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:padding="5sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/toolbar_username_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Username"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:padding="2dp"
+                android:id="@+id/profile_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/th"
+                 />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- User info -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Info"
+            android:textSize="18sp"
+            android:textStyle="bold"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/username_textview"
+            android:layout_width="410dp"
+            android:layout_height="wrap_content"
+            android:text="Username:"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registered Cycle:"></TextView>
+
+            <TextView
+                android:id="@+id/cycle_textview"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/amount_textview"
+            android:layout_width="410dp"
+            android:layout_height="wrap_content"
+            android:text="Amount:"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Station Coordinates -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Station Coordinates"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Longitude:" />
+
+            <TextView
+                android:id="@+id/longitude_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="72.82058" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Latitude:" />
+
+            <TextView
+                android:id="@+id/latitude_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="33.723537" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/station_location_btn"
+            android:layout_width="228dp"
+            android:layout_height="wrap_content"
+            android:text="Show" />
+    </LinearLayout>
+
+    <!-- User Location -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="138dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Location"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Longitude:" />
+
+            <TextView
+                android:id="@+id/userLon_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="00" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Latitude:" />
+
+            <TextView
+                android:id="@+id/userLat_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="00" />
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/userLocation_switch"
+            android:layout_width="206dp"
+            android:layout_height="wrap_content"
+            android:text="Location" />
+
+        <Button
+            android:id="@+id/user_location_btn"
+            android:layout_width="221dp"
+            android:layout_height="wrap_content"
+            android:text="Show" />
+    </LinearLayout>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="378dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/scan_button"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:text="Scan Bike" />
+
+        <Button
+            android:id="@+id/addAmountButton"
+            android:layout_width="201dp"
+            android:layout_height="wrap_content"
+            android:text="Add Amount" />
+    </LinearLayout>
+</LinearLayout>
